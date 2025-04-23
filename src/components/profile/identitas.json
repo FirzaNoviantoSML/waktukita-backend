@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_profile_identitas",
+  "info": {
+    "displayName": "identitas"
+  },
+  "options": {},
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "foto": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

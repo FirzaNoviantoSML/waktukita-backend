@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_pages",
+  "info": {
+    "singularName": "event-page",
+    "pluralName": "event-pages",
+    "displayName": "event-page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "ucapan": {
+      "type": "string",
+      "required": true
+    },
+    "event_date": {
+      "type": "datetime",
+      "required": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "birthday",
+        "wedding",
+        "graduation",
+        "anniversary",
+        "custom"
+      ]
+    },
+    "moments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "wishes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::wish.wish",
+      "mappedBy": "event_page"
+    },
+    "sound": {
+      "type": "text",
+      "required": true
+    },
+    "title_memories": {
+      "type": "string",
+      "required": true
+    },
+    "profile": {
+      "type": "component",
+      "repeatable": false,
+      "component": "profile.identitas"
+    },
+    "background": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

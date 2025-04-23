@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wishes",
+  "info": {
+    "singularName": "wish",
+    "pluralName": "wishes",
+    "displayName": "wish"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
+    "pesan": {
+      "type": "text",
+      "required": true
+    },
+    "event_page": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event-page.event-page",
+      "inversedBy": "wishes"
+    }
+  }
+}
