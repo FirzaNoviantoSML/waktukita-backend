@@ -384,25 +384,55 @@ export interface ApiEventPageEventPage extends Struct.CollectionTypeSchema {
     background: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
+    background_1: Schema.Attribute.Media<'images'>;
+    background_2: Schema.Attribute.Media<'images'>;
+    background_3: Schema.Attribute.Media<'images'>;
+    background_4: Schema.Attribute.Media<'images'>;
     category: Schema.Attribute.Enumeration<
       ['birthday', 'wedding', 'graduation', 'anniversary', 'custom']
     >;
+    cover: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    engagement: Schema.Attribute.Text;
     event_date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    event_day_1_date: Schema.Attribute.Date;
+    event_day_1_location: Schema.Attribute.Text;
+    event_day_1_maps: Schema.Attribute.Text;
+    event_day_1_place: Schema.Attribute.Text;
+    event_day_1_title: Schema.Attribute.String;
+    event_day_2_date: Schema.Attribute.Date;
+    event_day_2_location: Schema.Attribute.Text;
+    event_day_2_maps: Schema.Attribute.Text;
+    event_day_2_place: Schema.Attribute.Text;
+    event_day_2_title: Schema.Attribute.String;
+    female_callname: Schema.Attribute.Text;
+    female_family_tree: Schema.Attribute.Text;
+    female_ig: Schema.Attribute.Text;
+    female_name: Schema.Attribute.Text;
+    female_parents: Schema.Attribute.Text;
+    female_photo: Schema.Attribute.Media<'images'>;
+    first_meet: Schema.Attribute.Text;
+    initial: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::event-page.event-page'
     > &
       Schema.Attribute.Private;
+    male_callname: Schema.Attribute.Text;
+    male_family_tree: Schema.Attribute.Text;
+    male_ig: Schema.Attribute.String;
+    male_name: Schema.Attribute.Text;
+    male_parents: Schema.Attribute.Text;
+    male_photo: Schema.Attribute.Media<'images'>;
     moments: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    profile: Schema.Attribute.Component<'profile.identitas', false>;
     publishedAt: Schema.Attribute.DateTime;
+    relationship: Schema.Attribute.Text;
     slug: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -413,6 +443,8 @@ export interface ApiEventPageEventPage extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    verse: Schema.Attribute.Text;
+    verse_from: Schema.Attribute.String;
     wishes: Schema.Attribute.Relation<'oneToMany', 'api::wish.wish'>;
   };
 }

@@ -63,17 +63,149 @@
       "type": "string",
       "required": true
     },
-    "profile": {
-      "type": "component",
-      "repeatable": false,
-      "component": "profile.identitas"
-    },
     "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
+      ]
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "verse": {
+      "type": "text"
+    },
+    "verse_from": {
+      "type": "string"
+    },
+    "initial": {
+      "type": "string"
+    },
+    "male_name": {
+      "type": "text"
+    },
+    "male_callname": {
+      "type": "text"
+    },
+    "female_name": {
+      "type": "text"
+    },
+    "female_callname": {
+      "type": "text"
+    },
+    "male_family_tree": {
+      "type": "text"
+    },
+    "female_family_tree": {
+      "type": "text"
+    },
+    "male_ig": {
+      "type": "string"
+    },
+    "female_ig": {
+      "type": "text"
+    },
+    "first_meet": {
+      "type": "text"
+    },
+    "relationship": {
+      "type": "text"
+    },
+    "engagement": {
+      "type": "text"
+    },
+    "event_day_1_title": {
+      "type": "string"
+    },
+    "event_day_1_date": {
+      "type": "date"
+    },
+    "event_day_1_place": {
+      "type": "text"
+    },
+    "event_day_1_location": {
+      "type": "text"
+    },
+    "event_day_1_maps": {
+      "type": "text"
+    },
+    "event_day_2_title": {
+      "type": "string"
+    },
+    "event_day_2_date": {
+      "type": "date"
+    },
+    "event_day_2_place": {
+      "type": "text"
+    },
+    "event_day_2_location": {
+      "type": "text"
+    },
+    "event_day_2_maps": {
+      "type": "text"
+    },
+    "male_photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "female_photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "male_parents": {
+      "type": "text"
+    },
+    "female_parents": {
+      "type": "text"
+    },
+    "background_1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "background_2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "background_3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "background_4": {
+      "allowedTypes": [
+        "images"
       ],
       "type": "media",
       "multiple": false
